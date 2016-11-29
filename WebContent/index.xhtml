@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+	<meta charset="utf-8" />
+	<title>Wow - The Game</title>
+	<h:outputScript library="javax.faces" name="jsf.js" target="body" />
+
+	<h:outputStylesheet library="css" name="style.css" />
+
+</h:head>
+<h:body> 
+
+
+		<div class="container">
+		
+		
+		<div class="login">
+		
+		<h1 style="color:#fff; font-size:3.5rem; text-align:center">Wow - Game</h1>
+			<h:form>
+				
+			<h:inputText 
+				value="#{loginBean.name}"
+				required="true"
+				requiredMessage="Quem é você?"
+				id="name" styleClass="form-input"
+				p:placeholder="Digite seu nickname e tecle ENTER"
+				/>
+				<h:message for="name" styleClass="user-point" />
+    	   	<h:commandButton value="LOGAR" action="start"></h:commandButton>
+			
+			</h:form>
+		</div>
+	</div>
+
+</h:body>
+
+</html>
